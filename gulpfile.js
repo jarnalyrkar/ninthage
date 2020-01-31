@@ -34,6 +34,7 @@ if (isProduction) {
 
 gulp.task('styles', function() {
   del(settings.themeLocation + 'dist/css/*.css');
+  del(settings.themeLocation + 'dist/css/*.css.map');
   return gulp.src(settings.themeLocation + 'assets/css/style.css')
     .pipe(postcss([cssImport, mixins, forLoops, atVariables, cssvars, nested, rgba, colorFunctions, autoprefixer, clean]))
     .on('error', (error) => console.log(error.toString()))
@@ -43,6 +44,7 @@ gulp.task('styles', function() {
 
 gulp.task('scripts', function(callback) {
   del(settings.themeLocation + 'dist/js/*.js');
+  del(settings.themeLocation + 'dist/js/*.js.map');
   webpack(require('./webpack.config.js'), function(err, stats) {
     if (err) {
       console.log(err.toString());
