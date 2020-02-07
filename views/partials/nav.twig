@@ -1,6 +1,7 @@
 {# Example markup #}
 <nav class="headerMenu">
   <ul class="nav-main">
+    {# mainNav er globalt satt i inc/add_twig_nav.php #}
     {% for item in mainNav.items %}
     <li class="nav-main-item {{ item.classes|join(' ') }}">
       <a class="nav-main-link" href="{{ item.link }}">{{ item.title }}</a>
