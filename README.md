@@ -33,18 +33,10 @@ Lokalt:
 Klikk "use this template" i dette repoet. Du oppretter da et nytt repo med navnet på din theme.
 
 Tilbake i terminalen lokalt, kjør\
-```$ git remote add github [url til repoet du laget]```\
-```$ git pull github master```
+```$ git clone [url til repoet du laget]```\
 
-Sett opp git på Plesk. Når det er gjort legger du til denne også som remote:\
-```$ git remote add plesk [url til repo]```
-
-For å unngå å skrive credentials hver gang man pusher til plesk (usikret metode)\
-```$ git config credential.helper store```\
-Gjør en test-push:\
-```$ git push plesk master```
-
-Deretter må du installere Timber (gratis plugin). ACF Pro er også anbefalt, men ikke påkrevet.
+Deretter må du installere Timber (gratis plugin).\
+ACF Pro er også anbefalt, men ikke påkrevet.
 
 Nå kan vi installere node pakkene som kreves:\
 ```$ npm i```
