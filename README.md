@@ -1,6 +1,6 @@
 # wpboilerplate
 Dette er en boilerplate for å komme raskt igang med utvikling av WordPress themes\
-Den benytter seg av SCSS, moderne JS (ES6), twig-syntaks for PHP og gulp for hot reload av browser. \
+Den benytter seg av SCSS, moderne JS (ES6), twig for PHP (templatespråk) og gulp for hot reload av browser.
 
 ## Organisering
 */assets/css* Her ligger en style.css som importerer alle css-filene. Bare legg til flere importer ved behov. I disse filene kan du skrive SCSS som blir kompilert til vanlig css i style.css som ligger i rotmappa, som er fila som blir lest av WordPress.
