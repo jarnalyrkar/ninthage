@@ -11,10 +11,10 @@ Den benytter seg av SCSS, moderne JS (ES6), twig-syntaks for PHP og gulp for hot
 
 */*  I rotmappa legger du controllere til WordPress - de følger vanlig WordPress-hierarki. Se index.php for eksempel.
 
-### Flexible-content
-Som regel bruker vi flexible content som en veldig fleksibel page builder. Definer derfor først et ACF-felt av typen Flexible Content, og gi denne field name "main". Deretter lager du alle modulene dine som rows i denne.
+### Flexible-content (ACF Pro, optional)
+Definer først et ACF-felt av typen Flexible Content, og gi denne field name "main". Deretter lager du alle modulene dine som rows i denne.
 
-*/views/acf*  Her legger du views til acf moduler som benytter et Flexible Content-field. Bruk navnekonvensjonen acf-[navn-på-modul].twig. Du kan da få tak i feltene ved å bruke {{ fields.[navn-på-field] }}. I denne mappen ligger acf-main.php, som kaller de forskjellige view'ene. Når du skal opprette nye moduler må du dupliser if-setningen i denne fila og endre til navnet på den nye modulen.
+*/views/acf*  Her legger du views til acf moduler som benytter et Flexible Content-field. Bruk navnekonvensjonen acf-[navn-på-modul].twig. Du kan da få tak i feltene ved å bruke {{ fields.[navn-på-field] }}. I denne mappen ligger acf-main.php, som kaller de forskjellige view'ene.
 
 ## How-to
 - Opprett domene (domeneshop)
