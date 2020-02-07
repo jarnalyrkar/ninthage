@@ -12,6 +12,8 @@ require_once($base_dir . '/inc/functions/deregister_jquery.php');
 require_once($base_dir . '/inc/functions/add_responsive_embed.php');
 // Add BEM-style classes to menus
 require_once($base_dir . '/inc/functions/add_bem_menu_classes.php');
+// Extend Twig-functionality
+require_once($base_dir . '/inc/functions/extend_twig.php');
 
 /* Add default main menu */
 function create_main_menu() {
