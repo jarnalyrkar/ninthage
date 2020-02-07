@@ -1,5 +1,3 @@
 {% for fields in post.meta('main') %}
-  {% if fields.acf_fc_layout == 'content' %}
-    {% include 'views/acf/acf-content.twig' %}
-  {% endif %}
+  {% include 'views/acf/main/acf-' ~ fields.acf_fc_layout ~ '.twig' %}
 {% endfor %}
