@@ -30,7 +30,7 @@ Lokalt:
   - Gå til denne mappen med en terminal og kjør git init.
   - Gå til settings.js i rotmappa og endre urlToPreview til din lokale URL (f.eks sitename.test)
 
-Klikk "use this template" i dette repoet. Du opprett da et nytt repo med navnet på din theme.
+Klikk "use this template" i dette repoet. Du oppretter da et nytt repo med navnet på din theme.
 
 Tilbake i terminalen lokalt, kjør\
 ```$ git remote add github [url til repoet du laget]```\
