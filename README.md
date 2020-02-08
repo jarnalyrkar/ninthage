@@ -1,6 +1,6 @@
 # wpboilerplate
 Dette er en boilerplate for å komme raskt igang med utvikling av WordPress themes\
-Den benytter seg av SCSS, moderne JS (ES6), twig-syntaks for PHP og gulp for hot reload av browser. \
+Den benytter seg av SCSS, moderne JS (ES6), twig for PHP (templatespråk) og gulp for hot reload av browser.
 
 ## Organisering
 */assets/css* Her ligger en style.css som importerer alle css-filene. Bare legg til flere importer ved behov. I disse filene kan du skrive SCSS som blir kompilert til vanlig css i style.css som ligger i rotmappa, som er fila som blir lest av WordPress.
@@ -11,10 +11,10 @@ Den benytter seg av SCSS, moderne JS (ES6), twig-syntaks for PHP og gulp for hot
 
 */*  I rotmappa legger du controllere til WordPress - de følger vanlig WordPress-hierarki. Se index.php for eksempel.
 
-### Flexible-content
-Som regel bruker vi flexible content som en veldig fleksibel page builder. Definer derfor først et ACF-felt av typen Flexible Content, og gi denne field name "main". Deretter lager du alle modulene dine som rows i denne.
+### Flexible-content (ACF Pro, optional)
+Definer først et ACF-felt av typen Flexible Content, og gi denne field name "main". Deretter lager du alle modulene dine som rows i denne.
 
-*/views/acf*  Her legger du views til acf moduler som benytter et Flexible Content-field. Bruk navnekonvensjonen acf-[navn-på-modul].twig. Du kan da få tak i feltene ved å bruke {{ fields.[navn-på-field] }}. I denne mappen ligger acf-main.php, som kaller de forskjellige view'ene. Når du skal opprette nye moduler må du dupliser if-setningen i denne fila og endre til navnet på den nye modulen.
+*/views/acf*  Her legger du views til acf moduler som benytter et Flexible Content-field. Bruk navnekonvensjonen acf-[navn-på-modul].twig. Du kan da få tak i feltene ved å bruke {{ fields.[navn-på-field] }}. I denne mappen ligger acf-main.php, som kaller de forskjellige view'ene.
 
 ## How-to
 - Opprett domene (domeneshop)
@@ -30,21 +30,13 @@ Lokalt:
   - Gå til denne mappen med en terminal og kjør git init.
   - Gå til settings.js i rotmappa og endre urlToPreview til din lokale URL (f.eks sitename.test)
 
-Klikk "use this template" i dette repoet. Du opprett da et nytt repo med navnet på din theme.
+Klikk "use this template" i dette repoet. Du oppretter da et nytt repo med navnet på din theme.
 
 Tilbake i terminalen lokalt, kjør\
-```$ git remote add github [url til repoet du laget]```\
-```$ git pull github master```
+```$ git clone [url til repoet du laget]```\
 
-Sett opp git på Plesk. Når det er gjort legger du til denne også som remote:\
-```$ git remote add plesk [url til repo]```
-
-For å unngå å skrive credentials hver gang man pusher til plesk (usikret metode)\
-```$ git config credential.helper store```\
-Gjør en test-push:\
-```$ git push plesk master```
-
-Deretter må du installere Timber (gratis plugin). ACF Pro er også anbefalt, men ikke påkrevet.
+Deretter må du installere Timber (gratis plugin).\
+ACF Pro er også anbefalt, men ikke påkrevet.
 
 Nå kan vi installere node pakkene som kreves:\
 ```$ npm i```
