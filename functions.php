@@ -16,3 +16,5 @@ require_once($base_dir . '/inc/extend_twig.php');
 require_once($base_dir . '/inc/add_theme_assets.php');
 // Add Twig-navigation
 require_once($base_dir . '/inc/add_twig_nav.php');
+// Add breadcrumb
+require_once($base_dir . '/inc/add_breadcrumb.php');
