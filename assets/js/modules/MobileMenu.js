@@ -1,15 +1,15 @@
 class MobileMenu {
 
   constructor() {
-    this.hamburger = document.getElementById('hamburger')
-    this.menu = document.querySelector('.c-main-header__nav-list')
+    this.hamburger = document.querySelector('#hamburger');
+    this.nav = document.querySelector('.headerMenu');
     this.events();
   }
 
   events() {
     this.hamburger.addEventListener('click', (ev) => {
-      this.menu.classList.toggle('open');
-      this.hamburger.classList.toggle('open');
+      this.nav.classList.toggle('headerMenu--open');
+      this.hamburger.classList.toggle('hamburger--toggled');
     });
   }
 }

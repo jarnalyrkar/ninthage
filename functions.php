@@ -10,7 +10,9 @@ require_once($base_dir . '/inc/disable_emojis.php');
 require_once($base_dir . '/inc/deregister_jquery.php');
 // Add markup to allow for responsive oembeds
 require_once($base_dir . '/inc/add_responsive_embed.php');
-// Add BEM-style classes to menus
-require_once($base_dir . '/inc/add_bem_menu_classes.php');
 // Extend Twig-functionality
 require_once($base_dir . '/inc/extend_twig.php');
+// Add theme assets
+require_once($base_dir . '/inc/add_theme_assets.php');
+// Add Twig-navigation
+require_once($base_dir . '/inc/add_twig_nav.php');

@@ -17,5 +17,6 @@
 /* Responsive oembeds. Comment to reset embed behavior to fixed-width */
 @import "base/responsive-embed.css";
 
-/* BEM-blocks */
-@import "modules/main-navigation.css"
+/* Modules */
+@import "modules/primary-nav.css";
+@import "modules/header.css";
