@@ -68,9 +68,16 @@
     width: auto;
     & .nav-main {
       padding: 0;
-      display: block;
+      display: flex;
       &-link {
         color: black;
+      }
+    }
+    & .search {
+      margin-left: 1rem;
+      & input[type="text"] {
+        border: 0;
+        border-bottom: 1px solid #ccc;
       }
     }
   }
