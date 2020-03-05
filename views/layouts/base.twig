@@ -16,7 +16,16 @@
 <body>
   {% include 'partials/header.twig' %}
 
-  {% block content %}
-  {% endblock %}
-
+  {% if (!fn('post_password_required')) %}
+    {% block content %}
+    {% endblock %}
+  {% else %}
+    <div class="container my-5">
+      <div class="row my-5">
+        <div class="col-12 my-5 text-center">
+          {% fn('get_the_password_form')%}
+        </div>
+      </div>
+    </div>
+  {% endif %}
   {% include 'partials/footer.twig' %}

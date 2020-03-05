@@ -1,20 +1,20 @@
 var gulp = require('gulp'),
-settings = require('./settings'),
-webpack = require('webpack'),
-browserSync = require('browser-sync').create(),
-postcss = require('gulp-postcss'),
-rgba = require('postcss-hexrgba'),
-autoprefixer = require('autoprefixer'),
-forLoops = require('postcss-for'),
-cssvars = require('postcss-simple-vars'),
-nested = require('postcss-nested'),
-cssImport = require('postcss-import'),
-mixins = require('postcss-mixins'),
-atVariables = require('postcss-at-rules-variables'),
-hash = require('gulp-hash'),
-del = require('del'),
-clean = require('postcss-clean'),
-colorFunctions = require('postcss-color-function');
+  settings = require('./settings'),
+  webpack = require('webpack'),
+  browserSync = require('browser-sync').create(),
+  postcss = require('gulp-postcss'),
+  rgba = require('postcss-hexrgba'),
+  autoprefixer = require('autoprefixer'),
+  forLoops = require('postcss-for'),
+  cssvars = require('postcss-simple-vars'),
+  nested = require('postcss-nested'),
+  cssImport = require('postcss-import'),
+  mixins = require('postcss-mixins'),
+  atVariables = require('postcss-at-rules-variables'),
+  hash = require('gulp-hash'),
+  del = require('del'),
+  clean = require('postcss-clean'),
+  colorFunctions = require('postcss-color-function');
 
 const isProduction = process.env.NODE_ENV !== 'development';
 let hashOptions = {};
@@ -32,7 +32,7 @@ if (isProduction) {
 }
 
 
-gulp.task('styles', function() {
+gulp.task('styles', function () {
   del(settings.themeLocation + 'dist/css/*.css');
   del(settings.themeLocation + 'dist/css/*.css.map');
   return gulp.src(settings.themeLocation + 'assets/css/style.css')
@@ -42,10 +42,10 @@ gulp.task('styles', function() {
     .pipe(gulp.dest(settings.themeLocation + 'dist/css'))
 });
 
-gulp.task('scripts', function(callback) {
+gulp.task('scripts', function (callback) {
   del(settings.themeLocation + 'dist/js/*.js');
   del(settings.themeLocation + 'dist/js/*.js.map');
-  webpack(require('./webpack.config.js'), function(err, stats) {
+  webpack(require('./webpack.config.js'), function (err, stats) {
     if (err) {
       console.log(err.toString());
     }
@@ -55,7 +55,7 @@ gulp.task('scripts', function(callback) {
   });
 });
 
-gulp.task('watch', function() {
+gulp.task('watch', function () {
   browserSync.init({
     notify: false,
     proxy: settings.urlToPreview,
@@ -64,7 +64,7 @@ gulp.task('watch', function() {
 
   });
 
-  gulp.watch('./**/*.php', function() {
+  gulp.watch('./**/*.php', function () {
     browserSync.reload();
     done();
   });
@@ -72,21 +72,22 @@ gulp.task('watch', function() {
     browserSync.reload();
     done();
   });
-  gulp.watch([settings.themeLocation + 'assets/css/**/*.css',settings.themeLocation + 'assets/css/style.css'], gulp.parallel('waitForStyles'));
+  gulp.watch([settings.themeLocation + 'assets/css/**/*.css', settings.themeLocation + 'assets/css/style.css'], gulp.parallel('waitForStyles'));
+  gulp.watch([settings.themeLocation + 'assets/css/**/*.scss', settings.themeLocation + 'assets/css/style.css'], gulp.parallel('waitForStyles'));
   gulp.watch([settings.themeLocation + 'assets/js/modules/*.js', settings.themeLocation + 'assets/js/scripts.js'], gulp.parallel('waitForScripts'));
 });
 
-gulp.task('waitForStyles', gulp.series('styles', function() {
+gulp.task('waitForStyles', gulp.series('styles', function () {
   const src = gulp.src('**/*.css');
   if (isProduction) {
     browserSync.reload();
     done();
   } else {
-    return  gulp.src([settings.themeLocation + 'dist/css/*.css']).pipe(browserSync.stream() );
+    return gulp.src([settings.themeLocation + 'dist/css/*.css']).pipe(browserSync.stream());
   }
 }));
 
-gulp.task('waitForScripts', gulp.series('scripts', function(cb) {
+gulp.task('waitForScripts', gulp.series('scripts', function (cb) {
   browserSync.reload();
   cb();
 }));
