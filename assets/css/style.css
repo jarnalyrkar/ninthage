@@ -9,14 +9,14 @@
 
 /* SASS and global'ish stuff */
 /* Variables for frequently reused stuff like colors, fonts, etc */
-@import "base/variables.css";
+@import "base/variables.scss";
 
 /* Baseline (common typographic elements */
-@import "base/baseline.css";
+@import "base/baseline.scss";
 
 /* Responsive oembeds. Comment to reset embed behavior to fixed-width */
-@import "base/responsive-embed.css";
+@import "base/responsive-embed.scss";
 
 /* Modules */
-@import "modules/primary-nav.css";
-@import "modules/header.css";
+@import "modules/primary-nav.scss";
+@import "modules/header.scss";
