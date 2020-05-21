@@ -1,6 +1,6 @@
 <header class="topHeader">
   <div>
-    <a href="{{ site.link }}" aria-label="forside"><img src="{{ site_logo }}" width="100"></a>
+    <a href="{{ site.link }}" aria-label="forside"><img src="{{ site_logo }}" width="136"></a>
   </div>
   <div>
     {% include 'partials/nav.twig' %}
@@ -14,5 +14,8 @@
 
   </div>
 
+  <div class="languageSelector">
+    {{ fn('language_switcher') }}
+  </div>
 
 </header>

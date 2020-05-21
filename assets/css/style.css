@@ -18,5 +18,6 @@
 @import "base/responsive-embed.scss";
 
 /* Modules */
-@import "modules/primary-nav.scss";
+@import "modules/main-nav.scss";
 @import "modules/header.scss";
+@import "modules/language-selector.scss";

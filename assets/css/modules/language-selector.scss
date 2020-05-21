@@ -1,0 +1,19 @@
+.languageSelector {
+  position: relative;
+  & ul {
+    padding-left: 0;
+    margin-bottom: 0;
+  }
+
+  & li:not(.active) {
+    display: none;
+  }
+
+  &:hover {
+
+    & li {
+      display: block;
+    }
+  }
+
+}
