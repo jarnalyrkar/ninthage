@@ -8,6 +8,8 @@ require_once($base_dir . '/inc/enqueue_scripts.php');
 require_once($base_dir . '/inc/disable_emojis.php');
 // Remove jquery by default
 require_once($base_dir . '/inc/deregister_jquery.php');
+// Disable theme editor
+require_once($base_dir . '/inc/disable_theme_editor.php');
 // Add markup to allow for responsive oembeds
 require_once($base_dir . '/inc/add_responsive_embed.php');
 // Extend Twig-functionality
