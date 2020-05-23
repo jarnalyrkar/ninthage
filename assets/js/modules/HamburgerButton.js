@@ -1,4 +1,4 @@
-class MobileMenu {
+class HamburgerButton {
 
   constructor() {
     this.hamburger = document.querySelector('#hamburger');
@@ -14,6 +14,6 @@ class MobileMenu {
   }
 }
 
-export default MobileMenu;
+export default HamburgerButton;
 
 

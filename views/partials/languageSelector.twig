@@ -1,0 +1,16 @@
+  <ul class="headerMenu__submenu hasChildren">
+    {% for language in languages %}
+      {% if language.current_lang %}
+        <li class="headerMenu__item headerMenu__link">{{ language.name }}</li>
+      {% endif %}
+    {% endfor %}
+
+    {% for language in languages %}
+      {% if not language.current_lang %}
+        <li class="headerMenu__item">
+          <a class="headerMenu__link" href="{{ language.url }}">{{ language.name }}</a>
+        </li>
+      {% endif %}
+    {% endfor %}
+  </ul>
+</div>

@@ -21,3 +21,6 @@
 @import "modules/main-nav.scss";
 @import "modules/header.scss";
 @import "modules/language-selector.scss";
+@import "modules/hamburger-button.scss";
+@import "modules/hero-section.scss";
+

@@ -3,4 +3,21 @@
   justify-content: space-between;
   padding: 1rem;
   align-items: center;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 99999;
+
+  & .siteLogo {
+    display: none;
+  }
+}
+
+@media (min-width: 1012px) {
+  .topHeader {
+    & .siteLogo {
+      display: block;
+    }
+  }
 }

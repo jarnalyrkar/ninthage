@@ -1,19 +1,33 @@
 .languageSelector {
-  position: relative;
   & ul {
     padding-left: 0;
     margin-bottom: 0;
-  }
-
-  & li:not(.active) {
-    display: none;
-  }
-
-  &:hover {
-
+    list-style: none;
+    color: white;
+    & a {
+      color: white;
+      text-decoration: none;
+    }
     & li {
-      display: block;
+      margin-left: 0;
     }
   }
+}
 
+@media (min-width: 1012px) {
+  .languageSelector {
+    position: relative;
+    width: 12ch;
+    height: 1.5rem;
+    &:hover {
+      & li {
+        display: block;
+      }
+    }
+    & ul {
+      position: absolute;
+      left: 0;
+      top: -12px;
+    }
+  }
 }

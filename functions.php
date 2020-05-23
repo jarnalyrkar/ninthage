@@ -8,17 +8,15 @@ require_once($base_dir . '/inc/enqueue_scripts.php');
 require_once($base_dir . '/inc/disable_emojis.php');
 // Remove jquery by default
 require_once($base_dir . '/inc/deregister_jquery.php');
-// Disable theme editor
-require_once($base_dir . '/inc/disable_theme_editor.php');
 // Add markup to allow for responsive oembeds
 require_once($base_dir . '/inc/add_responsive_embed.php');
+// Disable theme editor
+require_once($base_dir . '/inc/disable_theme_editor.php');
 // Extend Twig-functionality
 require_once($base_dir . '/inc/extend_twig.php');
 // Add theme assets
 require_once($base_dir . '/inc/add_theme_assets.php');
 // Add Twig-navigation
 require_once($base_dir . '/inc/add_twig_nav.php');
-// Add breadcrumb
-require_once($base_dir . '/inc/add_breadcrumb.php');
-// Add woocommerce-support
-// require_once($base_dir . '/inc/add_woocommerce_support.php');
+// Disable gutenberg
+require_once($base_dir . '/inc/disable_gutenberg.php');
