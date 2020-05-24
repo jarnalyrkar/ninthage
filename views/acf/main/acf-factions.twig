@@ -1,0 +1,21 @@
+<div class="container factionList">
+  {% if fields.icon %}
+  <div class="row">
+    <img src="{{ fields.icon }}" width="100">
+  </div>
+  {% endif %}
+  <div class="row">
+    <div class="col-md-10 offset-md-1">
+      <h2 class="factionList__title">
+        {{ fields.title }}
+      </h2>
+    </div>
+  </div>
+  <div class="factionList__description">
+    {{ fields.body }}
+  </div>
+</div>
+
+{% for faction in factions %}
+  {{ dump(faction.header_image) }}
+{% endfor %}
