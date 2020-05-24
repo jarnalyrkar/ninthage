@@ -12,7 +12,7 @@ function add_to_twig( $twig ) {
   // $twig->addFilter(new Timber\Twig_Filter('phone', 'phone'));
 
   // Add functions:
-  // $twig->addFunction(new Timber\Twig_Function('breadcrumb', 'breadcrumb'));
+  $twig->addFunction(new Timber\Twig_Function('pll__', 'pll__'));
   // $twig->addFunction(new Timber\Twig_function('language_switcher', 'language_switcher'));
 
   return $twig;

@@ -9,6 +9,7 @@
 
 /* SASS and global'ish stuff */
 /* Variables for frequently reused stuff like colors, fonts, etc */
+@import "fonts/font.css";
 @import "base/variables.scss";
 
 /* Baseline (common typographic elements */
@@ -29,4 +30,7 @@
 @import "modules/full-width-image.scss";
 @import "modules/faction-card.scss";
 @import "modules/faction-list.scss";
-
+@import "modules/faction-page.scss";
+@import "modules/text-block.scss";
+@import "modules/image-gallery.scss";
+@import "modules/lightbox.scss";

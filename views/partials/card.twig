@@ -1,12 +1,12 @@
-<a class="col-md-4 card" href="{{ card.link.url }}">
+<a class="col-md-4 card" href="{{ url }}">
   <div class="card__texture"></div>
-    <div class="card__background card__background--{{ card.color }}" href="{{ card.link.url }}">
+    <div class="card__background card__background--{{ color }}">
       <div class="card__content">
-        <h3 class="card__title">{{ card.title }}</h3>
+        <h3 class="card__title">{{ title }}</h3>
         <div class="card__icon ">
-          <img src="{{ card.icon.url }}">
+          <img src="{{ icon }}">
         </div>
-        <p class="card__description">{{ card.description }}</p>
+        <p class="card__description">{{ description }}</p>
       </div>
   </div>
 </a>

@@ -1,0 +1,45 @@
+{% extends 'layouts/base.twig' %}
+
+{% block content %}
+  {% include 'partials/page-hero.twig' %}
+  <div class="container factionPage">
+    <div class="row">
+      <div class="col-12">
+        <h2>{{ post.subtitle }}</h2>
+      </div>
+      <div class="col-md-10 offset-md-1">
+        <div class="factionPage__lead">
+          {{ post.lead }}
+        </div>
+      </div>
+    </div>
+    <div class="row">
+
+        {% include 'partials/card.twig' with {
+          'title': pll__("Army Forum"),
+          'url': post.army_forum_link,
+          'color': "yellow",
+          'icon': quill_icon,
+          'description': pll__('Join discussions on your armies strategies, list building and news'),
+        } %}
+        {% include 'partials/card.twig' with {
+          'title': pll__("Army Miniatures"),
+          'url': post.army_miniatures_link,
+          'color': "blue",
+          'icon': miniature_icon,
+          'description': pll__("Visit the army miniature library to find model suggestions"),
+        } %}
+        {% include 'partials/card.twig' with {
+          'title': pll__("Slim Edition"),
+          'url': Image(Post(post.army_book).file).src,
+          'color': "red",
+          'icon': book_icon,
+          'description': pll__("Download your printer-friendly concise rules document"),
+        } %}
+
+      </div>
+      </div>
+    </div>
+  </div>
+  {% include 'acf/acf-main.twig' %}
+{% endblock %}

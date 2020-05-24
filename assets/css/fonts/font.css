@@ -1,0 +1,11 @@
+@font-face {
+  font-family: 'ElanEF-Medium';
+  src: url('/wp-content/themes/ninthage/assets/css/fonts/ElanEF-Medium.eot');
+  src: url('/wp-content/themes/ninthage/assets/css/fonts/ElanEF-Medium.eot?#iefix') format('embedded-opentype'),
+    url('/wp-content/themes/ninthage/assets/css/fonts/ElanEF-Medium.svg#ElanEF-Medium') format('svg'),
+    url('/wp-content/themes/ninthage/assets/css/fonts/ElanEF-Medium.ttf') format('truetype'),
+    url('/wp-content/themes/ninthage/assets/css/fonts/ElanEF-Medium.woff') format('woff'),
+    url('/wp-content/themes/ninthage/assets/css/fonts/ElanEF-Medium.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
