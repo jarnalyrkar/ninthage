@@ -1,83 +1,98 @@
-.hamburger {
-  display: block;
-  background-color: transparent;
-  border: 0;
-  padding: 0;
-  position: relative;
-  align-self: baseline;
-
-  &--toggled {
-    z-index: 1;
-    & .hamburger__line {
-      border-color: white;
-    }
-  }
-
-  &__line {
-    display: block;
-    border: 1px solid black;
-    width: 30px;
-    margin-bottom: 0.5em;
-    &:nth-child(3) {
-      margin-bottom: 0;
-    }
-  }
-
-}
-
 .headerMenu {
-  background-color: #631DC5;
+  background-color: black;
   position: absolute;
-  top: 0; right: 0;
+  top: 0;
+  right: 0;
   height: 100vh;
   width: 0;
-  transition: width 200ms ease-in-out;
+  transition: width 200ms ease-in-out, background-color 500ms;
   z-index: 1;
 
-  & .nav-main {
+  &__list {
     padding: 2rem;
     list-style: none;
     margin-bottom: 0;
     display: none;
   }
+  &__item {
+    border-bottom: 1px solid white;
+  }
 
   &--open {
     width: 100vw;
     transition: width 200ms ease-in-out;
-    & .nav-main {
+    & .headerMenu__list {
       display: block;
     }
   }
 
-  & .nav-main-link {
+  &__link {
     color: white;
     font-family: Geneva, sans-serif;
     text-transform: uppercase;
+    display: block;
+    padding: .75rem .5rem .5rem 0;
+    &:hover {
+      text-decoration: none;
+    }
+  }
+  &__submenu {
+    & > li:first-of-type::after {
+      content: '\025BE';
+      font-size: 1.25rem;
+      margin-left: .5rem;
+      transition: transform 200ms;
+    }
+    & li:not(:first-of-type) {
+      display: none;
+    }
+    &--open li:not(:first-of-type) {
+      display: block;
+    }
+    &--open li:first-of-type::after {
+      transform: rotate(180deg);
+      transition: transform 200ms;
+    }
   }
 }
 
-@media (min-width:992px) {
-  .hamburger {
-    display: none;
-  }
+@media (min-width:1012px) {
   .headerMenu {
     display: block;
     position: static;
     background-color: transparent;
+    transition: background-color 500ms ease;
     height: auto;
     width: auto;
-    & .nav-main {
+    &__list {
       padding: 0;
       display: flex;
-      &-link {
-        color: black;
+    }
+    &__item {
+      border-bottom: 0;
+
+    }
+    &__link {
+      color: white;
+      padding: .5rem 1rem;
+      &:hover {
+        background-color: rgba(0,0,0,0.75);
+        color: $mainhover;
       }
     }
-    & .search {
+  }
+}
+
+@media (min-width: 1190px) {
+  .headerMenu {
+    &__item {
       margin-left: 1rem;
-      & input[type="text"] {
-        border: 0;
-        border-bottom: 1px solid #ccc;
+      margin-right: 1rem;
+      &:first-of-type {
+        margin-left: 0;
+      }
+      &:last-of-type {
+        margin-right: 0;
       }
     }
   }

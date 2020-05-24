@@ -1,6 +1,10 @@
-import MobileMenu from './modules/MobileMenu';
+import HamburgerButton from './modules/HamburgerButton';
+import HeaderOpacity from './modules/HeaderOpacity';
+import NavSubmenus from './modules/NavSubmenus';
 // import bootstrap from '../../node_modules/bootstrap/dist/js/bootstrap.bundle.min';
 // import bootstrapSlim from '../../node_modules/jquery/dist/jquery.slim.min';
 
 /* Instansier objekter */
-const mobileMenu = new MobileMenu();
+const hamburgerButton = new HamburgerButton();
+const headerOpacity = new HeaderOpacity();
+const navSubmenus = new NavSubmenus();

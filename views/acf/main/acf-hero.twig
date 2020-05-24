@@ -1,0 +1,9 @@
+<section class="hero">
+  <div class="hero__parallax" style="background-image: url('{{ fields.bg_img.url }}')">
+  </div>
+  {% if fields.logo %}
+    <div class="hero__logoContainer">
+      <img src="{{ fields.logo.url }}">
+    </div>
+  {% endif %}
+</section>
