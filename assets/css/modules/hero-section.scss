@@ -1,0 +1,65 @@
+.hero {
+  height: 40vh;
+  width: 100%;
+  position: relative;
+  &::after {
+    content: "";
+    background-image: url('/wp-content/themes/ninthage/assets/img/black_texture.png');
+    background-repeat: repeat-x bottom;
+    height: 15px;
+    display: block;
+    margin-top: -15px;
+  }
+  &__parallax {
+    height: 100%;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: 225%;
+    background-position-x: center;
+    background-attachment: fixed;
+  }
+  &__logoContainer {
+    position: absolute;
+    top:0;
+    bottom: 2rem; /* A bit above vertical center */
+    left: 0;
+    right: 0;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    & img {
+      display: block;
+      width: 100%;
+      max-width: 430px;
+    }
+  }
+}
+
+@media (min-width: 640px) {
+  .hero {
+    &__logoContainer {
+      img {
+        max-width: 590px;
+      }
+    }
+    &__parallax {
+      background-size: 150%;
+    }
+  }
+}
+
+@media (min-width: 1012px) {
+  .hero {
+    height: 500px;
+    &__logoContainer {
+      img {
+        max-width: 770px;
+      }
+    }
+    &__parallax {
+      background-size: 100%;
+    }
+  }
+}
