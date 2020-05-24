@@ -27,4 +27,6 @@
 @import "modules/card.scss";
 @import "modules/teaser.scss";
 @import "modules/full-width-image.scss";
+@import "modules/faction-card.scss";
+@import "modules/faction-list.scss";
 
