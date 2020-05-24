@@ -23,4 +23,7 @@
 @import "modules/language-selector.scss";
 @import "modules/hamburger-button.scss";
 @import "modules/hero-section.scss";
+@import "modules/card.scss";
+@import "modules/teaser.scss";
+@import "modules/full-width-image.scss";
 

@@ -1,0 +1,122 @@
+.card {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  background-color: rgba(0,0,0,0.75);
+  margin: 1rem;
+
+  &:hover {
+    text-decoration: none;
+    & .card {
+      &__title {
+        color: $mainhover;
+        transition: color 200ms;
+      }
+      &__description {
+        color: white;
+        transition: color 200ms;
+      }
+      &__background {
+        background-color: rgba(0,0,0,0);
+        transition: background-color 250ms;
+      }
+    }
+  }
+  &__texture {
+    background-image: url('/wp-content/themes/ninthage/assets/img/flag_texture.png');
+    background-repeat: repeat-y;
+    background-size: 100%;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 99;
+  }
+  &__content {
+    text-align: left;
+    position: relative;
+    z-index: 999;
+    padding: 2rem;
+    display: grid;
+    grid-template-columns: 2;
+    grid-template-rows: 2;
+  }
+  &__title {
+    transition: color 200ms;
+    grid-column: 2;
+    grid-row: 1;
+  }
+  &__description {
+    transition: color 200ms;
+    grid-column: 2;
+    grid-row: 2;
+  }
+  &__icon {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    grid-column: 1;
+    grid-row: 1/3;
+
+    & img {
+      max-width: 100px;
+    }
+  }
+  &__background {
+    height: 100%;
+    transition: background-color 250ms;
+    &--red {
+      background-color: #482b21;
+      & .card__title {
+        color: #a2817f;
+      }
+      & .card__description {
+        color: #a2817f;
+      }
+    }
+    &--yellow {
+      background-color: #4e4130;
+      & .card__title {
+        color: #b3936d;
+      }
+      & .card__description {
+        color: #b3936d;
+      }
+    }
+    &--blue {
+      background-color: #343b57;
+      & .card__title {
+        color: #7b8ba4;
+      }
+      & .card__description {
+        color: #7b8ba4;
+      }
+    }
+  }
+
+}
+
+@media (min-width: 768px) {
+  .card {
+    margin: 0;
+    &__content {
+      display: block;
+      text-align: center;
+    }
+    &__icon img {
+      max-width: 180px;
+    }
+  }
+}
+
+@media (min-width: 1012px) {
+  .card {
+    &__title {
+      font-size: 26px;
+    }
+  }
+}
