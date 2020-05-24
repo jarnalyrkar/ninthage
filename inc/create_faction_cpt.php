@@ -2,8 +2,6 @@
 /**
  * Create custom post type for Factions
  */
-add_action('init', 'faction_post_type');
-
 function faction_post_type() {
   register_post_type('faction', array(
     'name' => 'Factions',
@@ -13,3 +11,5 @@ function faction_post_type() {
     'supports' => array('title', 'editor', 'page-attributes'),
   ));
 }
+
+add_action('init', 'faction_post_type');
