@@ -8,6 +8,7 @@ function add_custom_taxonomies()
 {
   // Add new "Locations" taxonomy to Posts
   register_taxonomy('book_category', 'faction', array(
+    'hierarchical' => true,
     'labels' => array(
       'name' => 'Categories',
       'singular_name' => 'Category'
