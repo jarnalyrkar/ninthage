@@ -20,3 +20,9 @@ require_once($base_dir . '/inc/add_theme_assets.php');
 require_once($base_dir . '/inc/add_twig_nav.php');
 // Disable gutenberg
 require_once($base_dir . '/inc/disable_gutenberg.php');
+// Enable thumbnails
+require_once($base_dir . '/inc/enable_thumbnails.php');
+// Create a Custom Post Type for Factions
+require_once($base_dir . '/inc/create_faction_cpt.php');
+// Create a Custom Post Type for Downloads
+require_once($base_dir . '/inc/create_downloads_cpt.php');

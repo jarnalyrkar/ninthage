@@ -1,0 +1,29 @@
+<div class="container">
+  <div class="row">
+    <div class="col-12 teaser">
+      <h2 class="teaser__title">{{ fields.title }}</h2>
+    </div>
+  </div>
+  <div class="row">
+    {% if fields.cards %}
+      {% for card in fields.cards %}
+        {% include 'partials/card.twig' %}
+      {% endfor %}
+    {% endif %}
+  </div>
+  <div class="row mx-0">
+    <div class="col-md-10 offset-md-1">
+      <div class="teaser__body">
+        {{ fields.body }}
+      </div>
+    </div>
+  </div>
+
+  {% if fields.buttons %}
+    <div class="row teaser__buttonRow">
+      {% for button in fields.buttons %}
+        <a href="{{ button.link.url }}" class="btn">{{ button.link.title }}</a>
+      {% endfor %}
+    </div>
+  {% endif %}
+</div>

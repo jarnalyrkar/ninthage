@@ -1,0 +1,23 @@
+.teaser {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  &__title {
+    text-align: center;
+  }
+  &__body {
+    margin-top: 1rem;
+  }
+  &__buttonRow {
+    justify-content: center;
+    width: 100%;
+    background-image: url('/wp-content/themes/ninthage/assets/img/hr.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    & .btn {
+      margin-left: .5rem;
+      margin-right: .5rem;
+    }
+  }
+}
