@@ -1,0 +1,33 @@
+.fullWidthImage {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  position: relative;
+  & img {
+    width: 100%;
+    z-index: 0;
+    object-fit: cover;
+    min-height: 300px;
+  }
+  &::before {
+    content: "";
+    background-image: url('/wp-content/themes/ninthage/assets/img/black_texture.png');
+    background-repeat: repeat-x;
+    width: 100%;
+    height: 20px;
+    position: absolute;
+    transform: rotate(180deg);
+    z-index: 9;
+    display: block;
+  }
+  &::after {
+    content: "";
+    display: block;
+    background-image: url('/wp-content/themes/ninthage/assets/img/black_texture.png');
+    background-repeat: repeat-x;
+    position:absolute;
+    width: 100%;
+    height: 20px;
+    z-index: 9;
+    bottom: 0;
+  }
+}
