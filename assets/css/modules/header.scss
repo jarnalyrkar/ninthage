@@ -8,6 +8,13 @@
   top: 0;
   left: 0;
   z-index: 99999;
+  transition: background-color 300ms;
+  background-color: rgba(0,0,0,0);
+
+  &--hasScrolled {
+    transition: background-color 300ms;
+    background-color: rgba(0,0,0,0.75);
+  }
 
   & .siteLogo {
     display: none;

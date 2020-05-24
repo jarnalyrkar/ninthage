@@ -13,6 +13,7 @@
 
 /* Baseline (common typographic elements */
 @import "base/baseline.scss";
+@import "base/buttons.scss";
 
 /* Responsive oembeds. Comment to reset embed behavior to fixed-width */
 @import "base/responsive-embed.scss";

@@ -8,11 +8,10 @@ class HeaderOpacity {
   events() {
     window.addEventListener('scroll', (ev) => {
       if (window.scrollY > 10) {
-        this.nav.style.backgroundColor = "rgba(0,0,0,0.75)";
+        this.nav.classList.add('topHeader--hasScrolled');
       } else {
-        this.nav.style.backgroundColor = "rgba(0,0,0,0)";
+        this.nav.classList.remove('topHeader--hasScrolled');
       }
-
     });
   }
 }
