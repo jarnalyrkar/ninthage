@@ -7,7 +7,13 @@
   <div class="row">
     {% if fields.cards %}
       {% for card in fields.cards %}
-        {% include 'partials/card.twig' %}
+        {% include 'partials/card.twig' with{
+          'url': card.link.url,
+          'color': card.color,
+          'title': card.title,
+          'icon': card.icon.url,
+          'description': card.description
+        } %}
       {% endfor %}
     {% endif %}
   </div>

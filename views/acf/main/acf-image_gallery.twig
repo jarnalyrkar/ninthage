@@ -1,0 +1,13 @@
+<div id="image_gallery" class="container imageGallery">
+  <div class="row">
+    {% for image in Image(fields.image_gallery) %}
+    <div class="col-md-4 col-6">
+      <img class="imageGallery__image" src="{{ image.src }}">
+    </div>
+    {% endfor %}
+  </div>
+</div>
+
+<div id="lightbox" class="lightbox">
+  <img id="current_image" class="lightbox__image">
+</div>
