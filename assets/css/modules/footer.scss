@@ -1,0 +1,56 @@
+.bottomFooter {
+  margin-top: 2rem;
+  background-image: url('/wp-content/themes/ninthage/assets/img/footer_texture.png');
+  background-repeat: repeat-x;
+  background-size: cover;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  width: 100%;
+  position: relative;
+  &::before {
+    position: absolute;
+    content: "";
+    background-image: url('/wp-content/themes/ninthage/assets/img/black_texture.png');
+    width: 100%;
+    display: block;
+    top: 0;
+    left: 0;
+    transform: rotateX(180deg);
+    z-index: 99;
+    height: 15px;
+  }
+  &__nav {
+    justify-content: flex-start;
+    flex-direction: column;
+    margin-bottom: 0.75rem;
+    margin-top: 15px; /* Height of black-texture */
+  }
+  &__link {
+    margin-left: 1rem;
+    margin-right: 1rem;
+    color: $mainhover;
+    &:hover {
+      color: white;
+    }
+  }
+  &__credits {
+    justify-content: center;
+    color: white;
+    justify-content: flex-start;
+    margin-left: 0;
+    margin-right: 0;
+    padding: 0;
+  }
+}
+@media (min-width: 620px) {
+  .bottomFooter {
+    &__nav {
+      justify-content: center;
+      flex-direction: row;
+    }
+    &__credits {
+      justify-content: center;
+      margin: 0;
+    }
+  }
+}
