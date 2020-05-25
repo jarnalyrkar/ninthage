@@ -21,6 +21,7 @@
   &--open {
     width: 100vw;
     transition: width 200ms ease-in-out;
+    overflow: scroll;
     & .headerMenu__list {
       display: block;
     }

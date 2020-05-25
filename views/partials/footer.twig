@@ -1,5 +1,14 @@
 <footer class="bottomFooter">
-
+  <div class="container">
+    <nav class="bottomFooter__nav row">
+      {% for item in footerNav.items %}
+      <a class="bottomFooter__link" href="{{ item.link }}">{{ item.title }}</a>
+      {% endfor %}
+    </nav>
+    <div class="row bottomFooter__credits">
+      Made with 🤍 by the 9th Age Community
+    </div>
+  </div>
 </footer>
 {{ function('wp_footer') }}
 </body>

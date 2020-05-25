@@ -8,6 +8,10 @@ body {
   display: none;
 }
 
+.disableScroll {
+  overflow-y: hidden;
+}
+
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Cormorant Infant', sans-serif;
   letter-spacing: 2px;
