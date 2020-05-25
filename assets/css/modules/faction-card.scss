@@ -1,5 +1,6 @@
 .factionCard {
   display: relative;
+  margin-bottom: 2rem;
   &__img {
     width: 100%;
   }
@@ -25,7 +26,7 @@
     }
   }
   &__icon {
-    width: 150px;
+    width: 100px;
     position: absolute;
     top: 0;
     left: 0;

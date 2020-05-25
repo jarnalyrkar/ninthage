@@ -47,3 +47,10 @@ function add_my_scripts() {
   // wp_enqueue_style('main-styles', $css , null,  null, false);
   // wp_enqueue_script('main-scripts', $script, array(), null, true);
 } add_action('wp_enqueue_scripts', 'add_my_scripts');
+
+
+
+function add_admin_scripts() {
+  wp_enqueue_script('adminLayout', get_stylesheet_directory_uri() . '/assets/js/modules/AdminLayout.js', null, 1, true);
+}
+add_action('admin_enqueue_scripts', 'add_admin_scripts');
