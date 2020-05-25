@@ -1,33 +1,59 @@
 .languageSelector {
+  &--mobile {
+    display: block;
+  }
+  &--desktop {
+    display: none;
+  }
   & ul {
-    padding-left: 0;
     margin-bottom: 0;
     list-style: none;
     color: white;
     & a {
       color: white;
       text-decoration: none;
+      &:hover {
+        color: $mainhover;
+      }
     }
     & li {
       margin-left: 0;
     }
   }
+  & .menu-item-has-children li {
+    padding-left: 20px;
+  }
+  & .menu-item-has-children li:first-of-type {
+    cursor: pointer;
+    padding-left: 0;
+    &:hover {
+      color: $mainhover;
+    }
+  }
 }
 
 @media (min-width: 1012px) {
+
   .languageSelector {
     position: relative;
-    width: 12ch;
-    height: 1.5rem;
+    & a {
+      width: 13ch;
+    }
+    &--mobile {
+      display: none;
+    }
+    &--desktop {
+      display: block;
+    }
     &:hover {
       & li {
         display: block;
       }
     }
-    & ul {
+    & .headerMenu__submenu {
       position: absolute;
       left: 0;
-      top: -12px;
+      padding-left: 0;
     }
   }
 }
