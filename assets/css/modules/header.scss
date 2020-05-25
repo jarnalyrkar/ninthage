@@ -1,7 +1,6 @@
 .topHeader {
   display: flex;
   justify-content: space-between;
-  padding: 1rem;
   align-items: center;
   position: fixed;
   width: 100%;
@@ -11,18 +10,20 @@
   transition: background-color 300ms;
   background-color: rgba(0,0,0,0);
 
-  &--hasScrolled {
-    transition: background-color 300ms;
-    background-color: rgba(0,0,0,0.75);
-  }
-
   & .siteLogo {
     display: none;
   }
 }
 
+
+
 @media (min-width: 1012px) {
   .topHeader {
+    padding: 1rem;
+      &--hasScrolled {
+        transition: background-color 300ms;
+        background-color: rgba(0, 0, 0, 0.75);
+      }
     & .siteLogo {
       display: block;
     }
