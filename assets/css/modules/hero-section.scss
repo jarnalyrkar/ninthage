@@ -17,6 +17,9 @@
     background-size: 225%;
     background-position-x: center;
     background-attachment: fixed;
+    &--default {
+      max-height: 150px;
+    }
   }
   &__logoContainer {
     position: absolute;
@@ -55,6 +58,9 @@
     }
     &__parallax {
       background-size: 180%;
+      &--default {
+        max-height: 200px;
+      }
     }
     &__title {
       font-size: 60px;
@@ -72,6 +78,9 @@
     }
     &__parallax {
       background-size: 120%;
+      &--default {
+        max-height: 300px;
+      }
     }
     &__title {
       font-size: 90px;
