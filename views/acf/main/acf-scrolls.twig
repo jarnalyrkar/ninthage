@@ -10,6 +10,7 @@
   <div class="scrollGrid">
     {% for scroll in scrolls %}
       <a class="scrollGrid__item" href="{{ Image(scroll.pdf).src }}">
+        <div class="scrollGrid__overlay"></div>
         <img src="{{ Image(scroll.thumbnail).src }}">
       </a>
     {% endfor %}
