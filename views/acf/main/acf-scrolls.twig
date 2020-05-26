@@ -1,0 +1,22 @@
+<div class="container scrollSection">
+  <div class="row">
+    <div class="col-12">
+      <h2 class="scrollSection__title">
+        {{ fields.title }}
+      </h2>
+    </div>
+    <div class="col-md-10 offset-md-1 scrollSection__body">
+      {{ fields.body }}
+    </div>
+  </div>
+  <div class="scrollGrid">
+    {% for scroll in scrolls %}
+      <a class="scrollGrid__item" href="{{ Image(scroll.pdf).src }}">
+        <img src="{{ Image(scroll.thumbnail).src }}">
+      </a>
+    {% endfor %}
+  </div>
+  <div class="row scrollSection__buttonContainer">
+    <a class="btn" href="{{ scroll_archive }}">All Issues</a>
+  </div>
+</div>
