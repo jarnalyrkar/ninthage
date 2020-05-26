@@ -1,0 +1,12 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-10 offset-md-1 accordion">
+      {% for folder in fields.folders %}
+        <div class="accordion__folder">
+          <h3 class="accordion__title">{{ folder.title }}</h3>
+          <div class="accordion__body">{{ folder.body }}</div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>

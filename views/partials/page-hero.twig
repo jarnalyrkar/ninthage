@@ -2,14 +2,13 @@
   {% set hero_img = Image(post.header_img).src %}
 {% else %}
   {% set hero_img = default_hero %}
-  {% set lowerHeight = "hero__parallax--default" %}
 {% endif %}
 
 {% if not title %}
   {% set title = post.title %}
 {% endif %}
 
-<section class="hero {{ lowerHeight }} mb-3 mb-md-5">
+<section class="hero">
   <div class="hero__parallax" style="background-image: url('{{ hero_img }}')"></div>
   <div class="hero__logoContainer">
     <h1 class="hero__title">{{ title }}</h1>
