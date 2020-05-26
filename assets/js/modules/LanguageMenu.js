@@ -6,7 +6,6 @@ class LanguageMenu {
 
   events() {
     this.languageSwitcher.addEventListener('click', (ev) => {
-      ev.preventDefault();
       this.languageSwitcher.querySelector('.headerMenu__submenu').classList.toggle('headerMenu__submenu--open');
     })
   }

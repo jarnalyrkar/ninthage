@@ -36,6 +36,7 @@
     }
   }
   &__title {
+    text-align: center;
     color: white;
     font-weight: 600;
     font-size: 40px;
@@ -63,17 +64,26 @@
 
 @media (min-width: 1012px) {
   .hero {
-    height: 570px;
+    height: 470px;
     &__logoContainer {
       img {
         max-width: 770px;
       }
     }
     &__parallax {
-      background-size: 100%;
+      background-size: 120%;
     }
     &__title {
       font-size: 90px;
+    }
+  }
+}
+
+@media (min-width: 1350px) {
+  .hero {
+    height: 570px;
+    &__parallax {
+      background-size: 100%;
     }
   }
 }
