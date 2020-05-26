@@ -35,3 +35,5 @@
 @import "modules/text-block.scss";
 @import "modules/image-gallery.scss";
 @import "modules/lightbox.scss";
+@import "modules/scroll-grid.scss";
+@import "modules/scroll-section.scss";
