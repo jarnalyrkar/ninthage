@@ -30,6 +30,6 @@ require_once($base_dir . '/inc/disable_comments.php');
 require_once($base_dir . '/inc/global_twig_variables.php');
 // Register Translation Strings for Polylang
 require_once($base_dir . '/inc/translation_strings.php');
+// Add auto-paragraph tags to wysiwyg-fields
+require_once($base_dir . '/inc/enable_autop.php');
 
-add_filter('the_content', 'wpautop');
-add_filter('acf_the_content', 'wpautop');

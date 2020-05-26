@@ -6,7 +6,7 @@
   }
   &__lead {
     margin-bottom: 2rem;
-    & p {
+    &, p {
       font-style: italic;
       color: #6c4b07;
       font-size: 22px;

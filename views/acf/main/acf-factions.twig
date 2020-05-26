@@ -22,11 +22,13 @@
   <div class="container factionList__container">
     <div class="row">
       {% for faction in Post(factions) %}
-        <a href="{{ faction.link }}" class="col-md-3 col-6 factionCard">
-          <img class="factionCard__img" src="{{ Image(faction.meta('thumbnail')).src }}">
-          <div class="d-none d-md-block factionCard__overlay">
-            <img class="factionCard__icon" src="{{ Image(faction.meta('icon')).src }}">
-            <h3 class="factionCard__title">{{ faction.post_title }}</h3>
+        <a href="{{ faction.link }}" class="col-lg-3 col-6 factionCard">
+          <div class="factionCard__content">
+            <img class="factionCard__img" src="{{ Image(faction.meta('thumbnail')).src }}">
+            <div class="factionCard__overlay">
+              <img class="factionCard__icon" src="{{ Image(faction.meta('icon')).src }}">
+              <h3 class="factionCard__title">{{ faction.post_title }}</h3>
+            </div>
           </div>
         </a>
       {% endfor %}
