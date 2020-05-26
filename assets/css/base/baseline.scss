@@ -19,9 +19,24 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 600;
 }
 
+h1, h2 {
+  text-align: center;
+}
+
 p {
   font-family: Arial, sans-serif;
   font-size: 18px;
+}
+
+.lead {
+  font-style: italic;
+  color: #6c4b07;
+  font-size: 22px;
+  font-family: 'Cormorant Infant';
+  font-weight: 100;
+  a {
+    color: $mainhover;
+  }
 }
 
 @media (min-width: 1012px) {

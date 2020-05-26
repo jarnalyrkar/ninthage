@@ -1,14 +1,16 @@
 .btn {
   padding: .5rem 1.5rem;
+  font-family: 'Cormorant Infant', sans-serif;
   background-color: $mainhover;
-  color: black;
+  color: white;
   border: 1px solid $mainhover;
   text-transform: capitalize;
   transition: color 100ms, border-color 100ms;
   &:hover {
     text-decoration: none;
-    color: white;
     transition: color 100ms, border-color 100ms;
     border-color: white;
+    background-color: unset;
+    color: white;
   }
 }

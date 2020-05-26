@@ -1,9 +1,22 @@
-<section class="hero">
-  <div class="hero__parallax" style="background-image: url('{{ fields.bg_img.url }}')">
+{% if fields.bg_img %}
+  {% set hero_img = fields.bg_img.url %}
+{% else %}
+  {% set hero_img = default_hero %}
+  {% set lowerHeight = "hero__parallax--default" %}
+{% endif %}
+
+{% if not title %}
+  {% set title = post.title %}
+{% endif %}
+
+<section class="hero {{ lowerHeight }}">
+  <div class="hero__parallax" style="background-image: url('{{ hero_img }}')">
   </div>
-  {% if fields.logo %}
-    <div class="hero__logoContainer">
+  <div class="hero__logoContainer">
+    {% if fields.logo %}
       <img src="{{ fields.logo.url }}">
+    {% else %}
+      <h1 class="hero__title">{{ title }}</h1>
+    {% endif %}
     </div>
-  {% endif %}
 </section>
