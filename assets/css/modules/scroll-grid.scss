@@ -14,7 +14,7 @@
     height: 100%;
     transition: opacity 200ms;
   }
-  &__item:first-of-type:hover .scrollGrid__overlay {
+  &__item:first-of-type .scrollGrid__overlay {
     height: calc(100% - 15px); /* 100% height, minus grid-gap */
   }
   &__item {

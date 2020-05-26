@@ -7,6 +7,8 @@ add_filter('timber/context', function ($context) {
   $context['quill_icon'] = get_stylesheet_directory_uri() . "/assets/img/icon_quill.png";
   $context['miniature_icon'] = get_stylesheet_directory_uri() . "/assets/img/icon_miniature.png";
   $context['footer_texture'] = get_stylesheet_directory_uri() . "/assets/img/footer_texture.png";
+  $context['default_hero'] = get_stylesheet_directory_uri() . "/assets/img/banner_default.jpg";
+
   $context['languages'] = pll_the_languages(array('raw' => 1));
 
   return $context;
