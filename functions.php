@@ -24,6 +24,8 @@ require_once($base_dir . '/inc/enable_thumbnails.php');
 require_once($base_dir . '/inc/create_faction_cpt.php');
 // Create a Custom Post Type for Downloads
 require_once($base_dir . '/inc/create_downloads_cpt.php');
+// Create a Custom Post Type for The 9th Scroll
+require_once($base_dir . '/inc/create_scroll_cpt.php');
 // Disable comments
 require_once($base_dir . '/inc/disable_comments.php');
 // Add to Global Twig Scope
