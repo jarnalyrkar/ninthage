@@ -1,4 +1,9 @@
 <div class="container scrollSection">
+  {% if fields.icon %}
+  <div class="row mb-3">
+    <img class="sectionIcon" src="{{ Image(fields.icon).src }}" width="100">
+  </div>
+  {% endif %}
   <div class="row">
     <h2 class="scrollSection__title">
       {{ fields.title }}

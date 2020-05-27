@@ -18,6 +18,7 @@
     transform: rotate(180deg);
     z-index: 9;
     display: block;
+    margin-top: -1px;
   }
   &::after {
     content: "";
