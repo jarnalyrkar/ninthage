@@ -8,7 +8,8 @@ add_filter('timber/context', function ($context) {
   $context['miniature_icon'] = get_stylesheet_directory_uri() . "/assets/img/icon_miniature.png";
   $context['footer_texture'] = get_stylesheet_directory_uri() . "/assets/img/footer_texture.png";
   $context['default_hero'] = get_stylesheet_directory_uri() . "/assets/img/banner_default.jpg";
-
+  $context['gif_loader'] = get_stylesheet_directory_uri() . "/assets/img/load.gif";
+  $context['forum_icon'] = get_stylesheet_directory_uri() . "/assets/img/bird_icon.png";
   $context['languages'] = pll_the_languages(array('raw' => 1));
 
   return $context;
