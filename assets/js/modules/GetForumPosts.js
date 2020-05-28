@@ -8,7 +8,7 @@
   getPosts() {
     const output = document.querySelector("#recentPostsList");
     if (output) {
-      fetch(this.siteUrl)
+      fetch(this.siteUrl, {mode: 'no-cors'})
         .then(res => res.text())
         .then(res => {
           let domparser = new DOMParser();
