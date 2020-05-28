@@ -35,3 +35,4 @@ require_once($base_dir . '/inc/translation_strings.php');
 // Add auto-paragraph tags to wysiwyg-fields
 require_once($base_dir . '/inc/enable_autop.php');
 
+
