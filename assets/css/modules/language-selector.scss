@@ -1,4 +1,13 @@
 .languageSelector {
+  & > span::before {
+    content: '\025BE';
+    font-size: 1rem;
+    margin-left: .5rem;
+    transition: transform .2s;
+    color: #fff;
+    float: right;
+    scale: 1.75;
+  }
   &--mobile {
     display: block;
   }
