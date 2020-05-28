@@ -46,9 +46,9 @@ function add_my_scripts() {
   // wp_enqueue_style('typekit', 'https://use.typekit.net/pln3dhd.css', null, '1.0.0', false);
   // wp_enqueue_style('main-styles', $css , null,  null, false);
   // wp_enqueue_script('main-scripts', $script, array(), null, true);
+  wp_enqueue_script('forumposts', get_template_directory_uri() . "/assets/js/modules/GetForumPosts.js", array(), false, true);
+  wp_localize_script('forumposts', 'ninthageData', array('root_url' => get_site_url()));
 } add_action('wp_enqueue_scripts', 'add_my_scripts');
-
-
 
 function add_admin_scripts() {
   wp_enqueue_script('adminLayout', get_stylesheet_directory_uri() . '/assets/js/modules/AdminLayout.js', null, 1, true);
